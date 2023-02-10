@@ -14,3 +14,9 @@ The tool is run with:
 python hw2v2.py -i <example file>
 or
 python3 hw2v2.py -i <example file>
+
+
+
+EDITS FROM HW1:
+HW1 was a brute force solver that supported integer arithmetic. This is a toop-down solver that uses types as a kind of context-free grammar
+to generate potential programs. It uses the typing to eliminate programs that do not match
