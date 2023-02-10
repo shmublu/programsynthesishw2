@@ -27,7 +27,7 @@ FUNCTION_TRANSLATION[_sub] = [INT, '-', INT]
 FUNCTION_TRANSLATION[_sifd] = ['squareIfTrueElseDecrement(', INT, ',', BOOL, ')']
 FUNCTION_TRANSLATION[_isodd] = ['isOdd(', INT, ')']
 FUNCTION_TRANSLATION[_not] = ['not', BOOL]
-MAX_POOL_SIZE = 50000
+MAX_POOL_SIZE = 10000000
 
 
 
@@ -77,8 +77,11 @@ def run_eval(input_tuples, expr, examples):
         test_eval = " "+ eval_expr + " "
         for i, val in enumerate(inp):
             test_eval = test_eval.replace(' ' + input_tuples[i][1] + ' ', ' ' + val + ' ')
-        eval_result = eval(test_eval)
-        if eval_result != ast.literal_eval(out):
+        try:
+            eval_result = eval(test_eval)
+            if eval_result != ast.literal_eval(out):
+                return False
+        except:
             return False
     return eval_expr
             

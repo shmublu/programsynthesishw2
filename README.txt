@@ -19,4 +19,6 @@ python3 hw2v2.py -i <example file>
 
 EDITS FROM HW1:
 HW1 was a brute force solver that supported integer arithmetic. This is a toop-down solver that uses types as a kind of context-free grammar
-to generate potential programs. It uses the typing to eliminate programs that do not match
+to generate potential programs. It uses the output type provided by the user to generate programs according to the grammar defined in the python file
+(i have predefined a bunch of operations, including integer arithmetic and a few custom methods). It will evaluate until the memory pool of potential programs reaches
+MAX_POOL_SIZE, which is defined by default to be 10,000,000(this corresponds to roughly 1-3 million programs being checked with the default settings)
