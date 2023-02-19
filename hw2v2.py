@@ -14,7 +14,7 @@ _sifd = 14
 _isodd = 20
 _not = 21
 
-LITERAL_DICT = {INT: {'1','2', '3'}, BOOL: {'True', 'False'}}
+LITERAL_DICT = {INT: {'1','2', '3','4', '5', '6', '7', '8', '9', '10'}, BOOL: {'True', 'False'}}
 FUNCTION_DICT = {}
 FUNCTION_DICT[INT] = [_mult, _add, _sub, _div, _sifd]
 FUNCTION_DICT[BOOL] = [_isodd, _not]
@@ -136,10 +136,10 @@ def squareIfTrueElseDecrement(x, tf):
             
         
         
-input_tuples = [(INT, 'x'), (INT, 'y')]
-expr = ['x', '*', 'y']
-return_type = BOOL
-examples = [(['3', '2'], 'False'),(['7', '1'], 'True'), (['3', '1'], 'True'), (['6', '2'], 'True')]
+#input_tuples = [(INT, 'x'), (INT, 'y')]
+#expr = ['x', '*', 'y']
+#return_type = BOOL
+#examples = [(['3', '2'], 'False'),(['7', '1'], 'True'), (['3', '1'], 'True'), (['6', '2'], 'True')]
 argParser = argparse.ArgumentParser(
                     prog = 'Top Down Synthesizer',
                     description = 'Synthesizes based on a high level specification',
